@@ -20,7 +20,7 @@ $ omf install galias
 ## Usage
 
 ```fish
-$ galias
+$ g -h
 ```
 
 

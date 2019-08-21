@@ -1,29 +1,25 @@
 function g -d "Git shortcut + aliases"
     argparse -s 'h/help' -- $argv
-    if set -q _flag_help; g::help; return; end
+    if set -q _flag_help; _g::help; return; end
 
     set -l cmd $argv[1]
     if test -z "$cmd"
-        return (__galias::err "missing parameter <command>")
+        return (_g::err "missing parameter <command>")
     end
     
-    if not string match -qr "g::$cmd" (g::aliases)
-        return (__galias::err "unknown command '$cmd'")
+    if not functions -q "g::$cmd"
+        return (_g::err "unknown command '$cmd'")
     end
 
-    eval "galias::$cmd" $argv[2..-1]
+    git rev-parse --git-dir >/dev/null ^&1
+    if test $status -ne 0
+        echo 'FATAL: Not a git repository.'
+        return $status
+    end
+
+    eval "g::$cmd" $argv[2..-1]
 end
 
-function g::help
-    if test (count $argv) -gt 0
-        echo 'g ' $argv[1] ' - ' $argv[2]
-        echo 'Usage g ' $argv[1] ' [-h/--help] ' $argv[3]
-    else
-        echo 'g - Git shortcut + aliases'
-        echo 'Usage g [-h/--help] <command> [<command args>]'
-        echo ''
-        echo 'Commands:'
-        ### HELP:START
-        ### HELP:STOP
-    end
-end
+
+
+
