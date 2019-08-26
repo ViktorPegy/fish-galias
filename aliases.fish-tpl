@@ -123,12 +123,12 @@ git commit --amend --no-edit
 git reset --soft HEAD^
 #<<<
 
-#>>> reh :: Drop all changes
-git reset --hard
+#>>> reh :: Drop all changes :: [<git reset args>]
+git reset --hard $argv
 #<<<
 
-#>>> rec :: Drop all changes and remove untracked files
-g reh
+#>>> rec :: Drop all changes and remove untracked files :: [<git reset args>]
+git reset --hard $argv
 git clean -fd
 #<<<
 
