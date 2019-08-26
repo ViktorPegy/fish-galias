@@ -6,5 +6,3 @@ function g::l -d 'Log commits with graph'
     end
     git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -5 $argv
 end
-
-    

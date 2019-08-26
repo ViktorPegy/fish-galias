@@ -9,5 +9,3 @@ function g::bc -d 'Checkout on new branch from current commit'
     end
     git checkout -B $argv[1]
 end
-
-    

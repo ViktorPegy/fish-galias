@@ -6,5 +6,3 @@ function g::plp -d 'Pull & prune'
     end
     git pull -p $argv
 end
-
-    

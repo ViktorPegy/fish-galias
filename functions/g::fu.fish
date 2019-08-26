@@ -18,5 +18,3 @@ function g::fu -d 'Unstage files by index in `g fi`'
     end
     g fi
 end
-
-    

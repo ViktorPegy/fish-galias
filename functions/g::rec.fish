@@ -7,5 +7,3 @@ function g::rec -d 'Drop all changes and remove untracked files'
     g reh
     git clean -fd
 end
-
-    

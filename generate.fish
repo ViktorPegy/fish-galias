@@ -29,8 +29,8 @@ for line in (cat "$dir/aliases.fish-tpl")
         echo "_g::cpl 'g' $name '$descr'" >> $cpl_file
     else if test -n $name
         if string match -qr '^#<<<' $line
-            echo -e 'end'\n >> "$dir/functions/g::$name.fish"
-            set func_file ''
+            echo 'end' >> "$dir/functions/g::$name.fish"
+            set name ''
             if test $cpl_mode -eq 0
                 echo "_g::cpl 'g\s+$name' # erase all" >> $cpl_file
             end

@@ -9,5 +9,3 @@ function g::ca -d 'Commit all files with message'
     end
     git commit -am $argv[1]
 end
-
-    

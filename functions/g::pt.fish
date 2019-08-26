@@ -6,6 +6,3 @@ function g::pt -d 'Push all tags'
     end
     git push --tags --all
 end
-
-    
-    end

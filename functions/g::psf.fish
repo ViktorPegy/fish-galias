@@ -6,5 +6,3 @@ function g::psf -d 'Force push'
     end
     git push -f $argv
 end
-
-    

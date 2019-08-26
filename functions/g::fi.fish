@@ -6,5 +6,3 @@ function g::fi -d 'List files with status and index'
     end
     git -c color.status=always status --untracked-files=all -s | env LC_COLLATE=C sort -b -k2 | awk '{print NR, $0}'
 end
-
-    

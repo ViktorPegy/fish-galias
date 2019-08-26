@@ -6,5 +6,3 @@ function g::re1 -d 'Uncommit last'
     end
     git reset --soft HEAD^
 end
-
-    

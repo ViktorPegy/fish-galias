@@ -17,7 +17,3 @@ function g::brf -d 'Rebase from <base> (def master) with actualize <base>'
     and git checkout $branch
     and git rebase $base_branch
 end
-
-    
-    ### =================================== COMMITS ===================================
-    

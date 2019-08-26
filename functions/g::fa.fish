@@ -8,7 +8,3 @@ function g::fa -d 'Stage all files'
     git add .
     g fi
 end
-
-    
-    ### =================================== BRANCHES =====================================
-    

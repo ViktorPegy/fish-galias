@@ -6,5 +6,3 @@ function g::pl -d 'Pull'
     end
     git pull $argv
 end
-
-    

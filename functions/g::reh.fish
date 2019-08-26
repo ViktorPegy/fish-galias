@@ -6,5 +6,3 @@ function g::reh -d 'Drop all changes'
     end
     git reset --hard
 end
-
-    

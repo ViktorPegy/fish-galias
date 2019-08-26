@@ -6,5 +6,3 @@ function g::ps -d 'Push'
     end
     git push $argv
 end
-
-    

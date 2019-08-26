@@ -9,5 +9,3 @@ function g::b -d 'Checkout on <branch>'
     end
     git checkout $argv[1]
 end
-
-    

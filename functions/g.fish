@@ -17,7 +17,7 @@ function g -d "Git shortcut + aliases"
         return $status
     end
 
-    eval "g::$cmd" $argv[2..-1]
+    eval "g::$cmd" (string escape -- $argv[2..-1])
 end
 
 

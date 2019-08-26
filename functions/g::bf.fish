@@ -15,5 +15,3 @@ function g::bf -d 'Checkout on new <branch> from <base> (def master) with actual
     and git rebase
     and git checkout -B $argv[1]
 end
-
-    

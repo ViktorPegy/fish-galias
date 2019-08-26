@@ -18,5 +18,3 @@ function g::fs -d 'Stage files by index in `g fi`'
     end
     g fi
 end
-
-    

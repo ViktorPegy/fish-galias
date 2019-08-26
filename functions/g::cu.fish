@@ -6,7 +6,3 @@ function g::cu -d 'Amend stages files to commit with no edit message'
     end
     git commit --amend --no-edit
 end
-
-    
-    ### =================================== RESET/REBASE ===================================
-    

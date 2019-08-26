@@ -9,5 +9,3 @@ function g::cm -d 'Commit with message'
     end
     git commit -m $argv[1]
 end
-
-    

@@ -9,7 +9,3 @@ function g::ri -d 'Rebase interactive <n> commits'
     end
     git rebase -i HEAD~$argv[1]
 end
-
-    
-    ### =================================== LOG ===================================
-    
