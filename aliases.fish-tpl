@@ -3,8 +3,8 @@ return
 
 ### =================================== FILES ===================================
 
-#>>> fi :: List files with status and index
-git -c color.status=always status --untracked-files=all -s | env LC_COLLATE=C sort -b -k2 | awk '{print NR, $0}'
+#>>> fi :: List files with status and index :: [<git status args>]
+git -c color.status=always status -uno -s $argv | env LC_COLLATE=C sort -b -k2 | awk '{print NR, $0}'
 #<<<
 
 #>>> fs :: Stage files by index in `g fi` :: <idx> [<idx>...]
