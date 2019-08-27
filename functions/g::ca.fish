@@ -1,4 +1,4 @@
-function g::ca -d 'Commit all files with message'
+function g::ca -d 'Commit all files with message % COMMITS'
     argparse -s 'h/help' -- $argv ^/dev/null
     if set -q _flag_help
         _g::help ca '<message>'

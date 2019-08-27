@@ -1,4 +1,4 @@
-function g::l -d 'Log commits with graph'
+function g::l -d 'Log commits with graph % LOG'
     argparse -s 'h/help' -- $argv ^/dev/null
     if set -q _flag_help
         _g::help l '[<git log args>]'

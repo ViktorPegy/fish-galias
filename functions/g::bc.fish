@@ -1,4 +1,4 @@
-function g::bc -d 'Checkout on new branch from current commit'
+function g::bc -d 'Checkout on new branch from current commit % BRANCHES'
     argparse -s 'h/help' -- $argv ^/dev/null
     if set -q _flag_help
         _g::help bc '<branch>'

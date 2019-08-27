@@ -1,4 +1,4 @@
-function g::b -d 'Checkout on <branch>'
+function g::b -d 'Checkout on <branch> % BRANCHES'
     argparse -s 'h/help' -- $argv ^/dev/null
     if set -q _flag_help
         _g::help b '<branch>'

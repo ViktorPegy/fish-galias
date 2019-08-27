@@ -1,4 +1,4 @@
-function g::plp -d 'Pull & prune'
+function g::plp -d 'Pull & prune % PUSH/PULL'
     argparse -s 'h/help' -- $argv ^/dev/null
     if set -q _flag_help
         _g::help plp '[<git pull args>]'

@@ -1,4 +1,4 @@
-function g::bf -d 'Checkout on new <branch> from <base> (def master) with actualize <base>'
+function g::bf -d 'Checkout on new <branch> from <base> (def master) with actualize <base> % BRANCHES'
     argparse -s 'h/help' -- $argv ^/dev/null
     if set -q _flag_help
         _g::help bf '<branch> [<base>]'

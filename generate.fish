@@ -8,14 +8,21 @@ for file in (find $dir/functions/ -type f -name 'g::*.fish')
     rm $file
 end
 
+set -l section ''
 set -l name ''
 set -l cpl_mode 0
 for line in (cat "$dir/aliases.fish-tpl")
-    if string match -qr '^#>>>' $line
+    if string match -qr '^### =+ .+ =+' $line
+        set section (string match -r '^### =+ (.+) =+' $line)[2]
+    else if string match -qr '^#>>>' $line
         set -l header (string split '::' (string replace '#>>>' '' $line))
         set -l descr (string trim $header[2])
         set -l usage (string trim $header[3])
         set name (string trim $header[1])
+
+        if test -n "$section"
+            set descr "$descr % $section"
+        end
         
         set -l func_file "$dir/functions/g::$name.fish"
         echo "function g::$name -d '$descr'" > $func_file

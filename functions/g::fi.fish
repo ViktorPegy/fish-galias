@@ -1,4 +1,4 @@
-function g::fi -d 'List files with status and index'
+function g::fi -d 'List files with status and index % FILES'
     argparse -s 'h/help' -- $argv ^/dev/null
     if set -q _flag_help
         _g::help fi ''

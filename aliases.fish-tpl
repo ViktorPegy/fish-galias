@@ -145,7 +145,7 @@ git rebase -i HEAD~$argv[1]
 git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -5 $argv
 #<<<
 
-#>>> ll :: `g l` with numstat :: [<git log args>]
+#>>> ll :: Log commits with graph and numstat :: [<git log args>]
 g l --numstat $argv
 #<<<
 

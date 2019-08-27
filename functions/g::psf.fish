@@ -1,4 +1,4 @@
-function g::psf -d 'Force push'
+function g::psf -d 'Force push % PUSH/PULL'
     argparse -s 'h/help' -- $argv ^/dev/null
     if set -q _flag_help
         _g::help psf '[<git push args>]'
