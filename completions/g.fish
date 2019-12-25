@@ -1,23 +1,27 @@
 complete -x -c g -s h -l help -d "help"
 
+# completes for s
+_g::cpl 'g' s 'Git short status % STATUS/FILES'
+_g::cpl 'g\s+' # erase all
+
 # completes for fi
-_g::cpl 'g' fi 'List files with status and index % FILES'
+_g::cpl 'g' fi 'List files with status and index % STATUS/FILES'
 _g::cpl 'g\s+' # erase all
 
 # completes for fs
-_g::cpl 'g' fs 'Stage files by index in `g fi` % FILES'
+_g::cpl 'g' fs 'Stage files by index in `g fi` % STATUS/FILES'
 for fi_line in (g fi)
     _g::cpl 'g\s+fs' (string split -n -m 3 ' ' $fi_line)[1 3] '(\s+\d+)*'
 end
 
 # completes for fu
-_g::cpl 'g' fu 'Unstage files by index in `g fi` % FILES'
+_g::cpl 'g' fu 'Unstage files by index in `g fi` % STATUS/FILES'
 for fi_line in (g fi)
     _g::cpl 'g\s+fu' (string split -n -m 3 ' ' $fi_line)[1 3] '(\s+\d+)*'
 end
 
 # completes for fa
-_g::cpl 'g' fa 'Stage all files % FILES'
+_g::cpl 'g' fa 'Stage all files % STATUS/FILES'
 _g::cpl 'g\s+' # erase all
 
 # completes for b
