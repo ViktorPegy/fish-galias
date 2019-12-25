@@ -1,7 +1,11 @@
 function aliases
 return
 
-### =================================== FILES ===================================
+### =================================== STATUS/FILES ===================================
+
+#>>> s :: Git short status :: [<git status args>]
+git status --short --branch $argv
+#<<<
 
 #>>> fi :: List files with status and index :: [<git status args>]
 git -c color.status=always status -uno -s $argv | env LC_COLLATE=C sort -b -k2 | awk '{print NR, $0}'
